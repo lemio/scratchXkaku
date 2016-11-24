@@ -166,10 +166,15 @@ new (function() {
 		uint8[1] = 88;
 		device.write(uint8)*/
         poller = setInterval(function() {
-			input = device.read(1,console.log);
+			input = device.read(1,function (test){
+                var test = Uint8Array(input);
+                console.log(test);
+            });
         }, 100);
 
-       setInterval(function() { console.log(input); }, 100);
+       setInterval(function() { 
+        var test = Uint8Array(input);
+        console.log(test); }, 100);
     };
 
     ext._deviceRemoved = function(dev) {
