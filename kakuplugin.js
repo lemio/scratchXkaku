@@ -228,8 +228,8 @@ new (function() {
             ['w', 'Turn %m.type switch %n %m.state', 'setState', 'KaKu' , 1,'on']
         ],
         menus: {
-            state: ['on', 'off']
-            type: ['KaKu','Action','Blokker','Elro',]
+            state: ['on', 'off'],
+            type: ['KaKu','Action','Blokker','Elro']
         }
     };
     ScratchExtensions.register('KaKu', descriptor, ext, {type: 'hid', vendor:0x16c0, product:0x05df});
